@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devshree Tailoring & Kapada Pasal | Ladies & Baby Wear - Morang</title>
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Morang's premier destination for custom-stitched ladies' fashion and baby clothing. Bespoke tailoring by Devshree Khadka Dangi.">
+    <meta name="keywords" content="Tailoring Morang, Ladies Wear Nepal, Baby Clothing Nepal, Kapada Pasal, Devshree Tailoring">
+    <meta property="og:title" content="Devshree Tailoring & Kapada Pasal">
+    <meta property="og:description" content="Bespoke Ladies & Baby Wear in Sunwarshi-3, Morang.">
+    <meta property="og:type" content="website">
+
+    <!-- External Assets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        
+        .glass-nav { 
+            background: rgba(255, 255, 255, 0.98); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 2px solid #b45309; 
+        }
+        
+        .text-gradient { 
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 50%, #b45309 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* --- HERO BANNER SECTION --- */
+        .hero-banner {
+            position: relative;
+            /* Prioritizes your local 'banner.jpg' file */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 4px solid #b45309;
+        }
+        
+        /* Fallback if banner.jpg is missing */
+        .hero-banner:not([style*="banner.jpg"]) {
+             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1556905055-8f358a7a4bb4?auto=format&fit=crop&q=80&w=1600');
+        }
+        
+        .qr-card {
+            background: white;
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+        .qr-card:hover { 
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card {
+            overflow: hidden;
+            border-radius: 2rem;
+            position: relative;
+            transition: all 0.5s ease;
+            height: 500px;
+            background: #f1f1f1;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 4px;
+            height: 100%;
+            width: 100%;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover .photo-grid img {
+            transform: scale(1.05);
+        }
+        
+        .service-overlay {
+            background: linear-gradient(to top, rgba(69, 10, 10, 0.95), transparent);
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 2rem;
+            color: white;
+            z-index: 10;
+        }
+
+        .proprietor-img {
+            width: 280px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            border: 8px solid white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            margin: 0 auto;
+            background-color: #e5e7eb;
+        }
+
+        .company-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .map-container {
+            position: relative;
+            padding-bottom: 40%; 
+            height: 0;
+            overflow: hidden;
+            border-radius: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .map-container { padding-bottom: 75%; }
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-stone-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <img src="logo.png" alt="Devshree Logo" class="company-logo" onerror="this.src='https://ui-avatars.com/api/?name=D+T&background=7f1d1d&color=fbbf24&size=128'">
+                    <div class="flex flex-col border-l border-gray-200 pl-3">
+                        <span class="font-bold text-lg tracking-tight text-red-900 leading-none">Devshree</span>
+                        <span class="text-[10px] uppercase tracking-widest text-emerald-700 font-bold leading-tight">Tailoring & Kapada Pasal</span>
+                        <span class="text-[8px] uppercase font-bold text-amber-600 mt-0.5">Estd. 2025</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-red-800 font-semibold transition">Our Speciality</a>
+                    <a href="#proprietor" class="text-gray-700 hover:text-red-800 font-semibold transition">Proprietor</a>
+                    <a href="#location" class="text-gray-700 hover:text-red-800 font-semibold transition">Find Us</a>
+                    <a href="tel:+9779763715974" class="bg-red-900 hover:bg-red-950 text-amber-400 px-6 py-2.5 rounded-full font-bold transition shadow-lg border border-amber-600/50 flex items-center gap-2">
+                        <i class="fa-solid fa-phone-flip text-xs"></i> Call Now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-red-900 p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b-2 border-amber-600 px-4 py-6 space-y-4 shadow-xl">
+            <a href="#services" class="block text-lg font-bold text-gray-800 hover:text-red-900">Our Speciality</a>
+            <a href="#proprietor" class="block text-lg font-bold text-gray-800 hover:text-red-900">Proprietor</a>
+            <a href="#location" class="block text-lg font-bold text-gray-800 hover:text-red-900">Find Us</a>
+            <a href="tel:+9779763715974" class="block w-full text-center bg-red-900 text-amber-400 py-4 rounded-xl font-bold">
+                <i class="fa-solid fa-phone-flip mr-2"></i> Call Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-banner">
+        <div class="max-w-7xl mx-auto px-4 w-full text-center">
+            <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-amber-500/30 text-amber-200 text-sm font-bold mb-8 border border-amber-400/50 animate-float backdrop-blur-md">
+                <i class="fa-solid fa-crown text-amber-400"></i> PREMIER BOUTIQUE • MORANG, NEPAL
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black text-white mb-8 drop-shadow-2xl tracking-tight">
+                Elegance for Her. <br><span class="text-gradient">Joy for Little Ones.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-amber-50 mb-10 max-w-3xl mx-auto drop-shadow-md font-medium leading-relaxed">
+                Step into a world of bespoke tailoring where every stitch tells a story of perfection. 
+                From designer kurtas to cozy baby wear, we craft your dreams into reality.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" class="w-full sm:w-auto px-10 py-5 bg-amber-500 text-red-950 rounded-2xl font-black text-xl shadow-2xl hover:bg-amber-400 transition transform hover:scale-105 active:scale-95">
+                    Explore Our Gallery
+                </button>
+                <a href="https://wa.me/9779763715974?text=Namaste%20Devshree%20Tailoring!" target="_blank" class="w-full sm:w-auto px-10 py-5 border-2 border-white/50 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-white/20 hover:border-white transition backdrop-blur-md transform hover:scale-105 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-2xl text-emerald-400"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-black text-gray-900 mb-4 tracking-tight">Our Specialities</h2>
+            <div class="h-1.5 w-24 bg-amber-500 mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-500 font-medium">Precision, Quality, and Style in every piece.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <!-- Ladies Wear -->
+            <div class="service-card group cursor-pointer shadow-lg hover:shadow-2xl">
+                <div class="photo-grid">
+                    <img src="ladies_wear_1.jpg" alt="Ladies Wear 1" onerror="this.src='https://images.unsplash.com/photo-1589310243389-96a5483213a8?auto=format&fit=crop&q=80&w=400'">
+                    <img src="ladies_wear_2.jpg" alt="Ladies Wear 2" onerror="this.src='https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=400'">
+                    <img src="ladies_wear_3.jpg" alt="Ladies Wear 3" onerror="this.src='https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&q=80&w=400'">
+                    <img src="ladies_wear_4.jpg" alt="Ladies Wear 4" onerror="this.src='https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=400'">
+                </div>
+                <div class="service-overlay">
+                    <div class="mb-4 w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-red-950 shadow-lg">
+                        <i class="fa-solid fa-vest text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2">Ladies Wear</h3>
+                    <p class="text-stone-200 text-sm font-medium">Custom Kurtas, Designer Blouses, & Elegant Suits.</p>
+                </div>
+            </div>
+
+            <!-- Baby Wear -->
+            <div class="service-card group cursor-pointer shadow-lg hover:shadow-2xl">
+                <div class="photo-grid">
+                    <img src="baby_wear_1.jpg" alt="Baby Wear 1" onerror="this.src='https://images.unsplash.com/photo-1519689689253-ca48f593e7c5?auto=format&fit=crop&q=80&w=400'">
+                    <img src="baby_wear_2.jpg" alt="Baby Wear 2" onerror="this.src='https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=400'">
+                    <img src="baby_wear_3.jpg" alt="Baby Wear 3" onerror="this.src='https://images.unsplash.com/photo-1621452137023-9682661c27ad?auto=format&fit=crop&q=80&w=400'">
+                    <img src="baby_wear_4.jpg" alt="Baby Wear 4" onerror="this.src='https://images.unsplash.com/photo-1604467794349-0b74285de7e7?auto=format&fit=crop&q=80&w=400'">
+                </div>
+                <div class="service-overlay">
+                    <div class="mb-4 w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-red-950 shadow-lg">
+                        <i class="fa-solid fa-child text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2">Baby Wear</h3>
+                    <p class="text-stone-200 text-sm font-medium">Soft fabrics and gentle designs for total comfort.</p>
+                </div>
+            </div>
+
+            <!-- Fabric Sales -->
+            <div class="service-card group cursor-pointer shadow-lg hover:shadow-2xl">
+                <div class="photo-grid">
+                    <img src="fabric_1.jpg" alt="Fabric 1" onerror="this.src='https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=400'">
+                    <img src="fabric_2.jpg" alt="Fabric 2" onerror="this.src='https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&q=80&w=400'">
+                    <img src="fabric_3.jpg" alt="Fabric 3" onerror="this.src='https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=400'">
+                    <img src="fabric_4.jpg" alt="Fabric 4" onerror="this.src='https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&q=80&w=400'">
+                </div>
+                <div class="service-overlay">
+                    <div class="mb-4 w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-red-950 shadow-lg">
+                        <i class="fa-solid fa-scroll text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2">Fabric Sales</h3>
+                    <p class="text-stone-200 text-sm font-medium">Premium fabrics available in our Kapada Pasal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proprietor Section -->
+    <section id="proprietor" class="py-24 bg-stone-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-[3.5rem] shadow-2xl overflow-hidden border border-amber-100 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-2/5 p-12 flex justify-center bg-amber-50/50">
+                    <img src="proprietor.jpg" alt="Devshree Khadka Dangi" class="proprietor-img" onerror="this.src='https://ui-avatars.com/api/?name=Devshree+Khadka&background=7f1d1d&color=fbbf24&size=512'">
+                </div>
+                <div class="w-full md:w-3/5 p-10 lg:p-20 text-left">
+                    <span class="text-emerald-700 font-black uppercase tracking-[0.3em] text-[10px] mb-6 inline-flex items-center gap-3">
+                        <span class="w-10 h-[2px] bg-emerald-700"></span> OUR VISION <span class="w-10 h-[2px] bg-emerald-700"></span>
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-8 leading-tight">
+                        Crafting Confidence Through <br><span class="text-red-900">Custom Fit.</span>
+                    </h2>
+                    <p class="text-xl text-gray-700 mb-8 italic leading-relaxed font-serif">
+                        "As a tailor, I believe that clothes are not just about fashion; they are about identity and comfort. My mission is to provide every woman and child in our community with clothing that fits perfectly and makes them feel confident."
+                    </p>
+                    <div class="flex items-center gap-6 border-t border-stone-100 pt-10">
+                        <div class="h-16 w-16 bg-red-900 rounded-full flex items-center justify-center text-amber-400 font-bold text-2xl shadow-xl">DK</div>
+                        <div>
+                            <p class="font-black text-2xl text-gray-900">Devshree Khadka Dangi</p>
+                            <p class="text-xs font-black text-amber-700 uppercase tracking-[0.2em] mt-1">Founder & Master Tailor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="location" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black text-gray-900 mb-4 tracking-tight">Visit Our Shop</h2>
+                <div class="h-1.5 w-24 bg-amber-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 font-bold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-location-dot text-red-700"></i> Sunwarshi-3, Morang, Nepal
+                </p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14283.456789!2d87.456789!3d26.56789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef697e59f5b33b%3A0x6b00b73e5f5f5f5f!2sSunwarshi%2C%20Morang!5e0!3m2!1sen!2snp!4v1710000000000!5m2!1sen!2snp" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-red-950 py-20 text-stone-300">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="logo.png" alt="Devshree Logo" class="h-24 mx-auto mb-8 brightness-150" onerror="this.style.display='none'">
+            <div class="mb-10">
+                <h4 class="text-3xl font-black text-white uppercase tracking-tighter">Devshree Tailoring<br>& Kapada Pasal</h4>
+                <p class="text-[10px] text-amber-500 font-black uppercase tracking-[0.4em] mt-2">ESTABLISHED 2025</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 mb-16 py-10 border-y border-white/10">
+                <div class="text-center md:text-right md:w-1/3">
+                    <p class="text-[10px] uppercase opacity-40 mb-3 font-black tracking-widest">Registration</p>
+                    <p class="text-lg font-black text-white">PAN: 623261396</p>
+                    <p class="text-xs opacity-50 mt-1 font-bold">Sunwarshi-3, Morang, Nepal</p>
+                </div>
+
+                <div class="flex justify-center gap-8 md:w-1/3">
+                    <div class="flex flex-col items-center">
+                        <div class="qr-card">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/9779763715974" alt="WhatsApp QR" class="w-16 h-16">
+                        </div>
+                        <span class="text-[9px] font-black uppercase text-emerald-400 tracking-widest mt-3">WhatsApp</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="qr-card">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.tiktok.com/@devshreetailoring" alt="TikTok QR" class="w-16 h-16">
+                        </div>
+                        <span class="text-[9px] font-black uppercase text-white tracking-widest mt-3">TikTok</span>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-left md:w-1/3">
+                    <p class="text-[10px] uppercase opacity-40 mb-3 font-black tracking-widest">Business Hours</p>
+                    <p class="text-lg font-black text-white">SUN - THU: 8AM - 8PM</p>
+                    <p class="text-xs text-amber-500 font-black mt-1 uppercase tracking-widest italic">Friday: Closed</p>
+                </div>
+            </div>
+            
+            <p class="text-[10px] opacity-20 uppercase tracking-[0.5em] font-black">© 2025 DEVSHREE TAILORING</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            window.scrollY > 50 ? nav.classList.add('shadow-xl', 'h-16') : nav.classList.remove('shadow-xl', 'h-16');
+        });
+    </script>
+</body>
+</html>
